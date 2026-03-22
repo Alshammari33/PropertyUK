@@ -4,7 +4,7 @@ __pycache__/
 *.pyo
 .env
 venv/
-*.db
+# Keep backend/ukproperty.db for Vercel deployment
 
 # Node
 node_modules/
@@ -18,3 +18,4 @@ pgdata/
 .idea/
 *.swp
 .DS_Store
+.vercel
