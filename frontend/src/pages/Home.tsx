@@ -19,23 +19,23 @@ import Chip from '@mui/material/Chip';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const POPULAR_CITIES = [
-  { name: 'London', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=260&fit=crop' },
-  { name: 'Manchester', img: 'https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=400&h=260&fit=crop' },
-  { name: 'Birmingham', img: 'https://images.unsplash.com/photo-1598128558393-70ff21f8be44?w=400&h=260&fit=crop' },
-  { name: 'Edinburgh', img: 'https://images.unsplash.com/photo-1506377585622-bedcbb5f6568?w=400&h=260&fit=crop' },
-  { name: 'Bristol', img: 'https://images.unsplash.com/photo-1571168136613-46401b03904e?w=400&h=260&fit=crop' },
-  { name: 'Leeds', img: 'https://images.unsplash.com/photo-1590075254806-fb228a70bfb8?w=400&h=260&fit=crop' },
-  { name: 'Glasgow', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=260&fit=crop' },
-  { name: 'Liverpool', img: 'https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?w=400&h=260&fit=crop' },
-  { name: 'Sheffield', img: 'https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=400&h=260&fit=crop' },
-  { name: 'Cardiff', img: 'https://images.unsplash.com/photo-1572883454114-efb93fc35b32?w=400&h=260&fit=crop' },
-  { name: 'Newcastle', img: 'https://images.unsplash.com/photo-1589920527942-477a8e04a1f2?w=400&h=260&fit=crop' },
-  { name: 'Nottingham', img: 'https://images.unsplash.com/photo-1584466977773-e625c37cdd50?w=400&h=260&fit=crop' },
-  { name: 'Brighton', img: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&h=260&fit=crop' },
-  { name: 'Cambridge', img: 'https://images.unsplash.com/photo-1579862132201-ac5f2990bc8e?w=400&h=260&fit=crop' },
-  { name: 'Oxford', img: 'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=400&h=260&fit=crop' },
-  { name: 'Bath', img: 'https://images.unsplash.com/photo-1580406458354-cc49419d4649?w=400&h=260&fit=crop' },
-  { name: 'Reading', img: 'https://images.unsplash.com/photo-1617128734662-66da6c1d3505?w=400&h=260&fit=crop' },
+  { name: 'London', img: '/cities/london.jpg' },
+  { name: 'Manchester', img: '/cities/manchester.jpg' },
+  { name: 'Birmingham', img: '/cities/birmingham.jpg' },
+  { name: 'Edinburgh', img: '/cities/edinburgh.jpg' },
+  { name: 'Bristol', img: '/cities/bristol.jpg' },
+  { name: 'Leeds', img: '/cities/leeds.jpg' },
+  { name: 'Glasgow', img: '/cities/glasgow.jpg' },
+  { name: 'Liverpool', img: '/cities/liverpool.jpg' },
+  { name: 'Sheffield', img: '/cities/sheffield.jpg' },
+  { name: 'Cardiff', img: '/cities/cardiff.jpg' },
+  { name: 'Newcastle', img: '/cities/newcastle.jpg' },
+  { name: 'Nottingham', img: '/cities/nottingham.jpg' },
+  { name: 'Brighton', img: '/cities/brighton.jpg' },
+  { name: 'Cambridge', img: '/cities/cambridge.jpg' },
+  { name: 'Oxford', img: '/cities/oxford.jpg' },
+  { name: 'Bath', img: '/cities/bath.jpg' },
+  { name: 'Reading', img: '/cities/reading.jpg' },
 ];
 
 function Home() {
@@ -193,24 +193,36 @@ function Home() {
                   overflow: 'hidden',
                   cursor: 'pointer',
                   height: 140,
-                  backgroundImage: `url(${city.img})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
                   border: '1px solid #e5e7eb',
                   transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                   '&:hover': {
                     transform: 'scale(1.03)',
                     boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
                   },
-                  '&::after': {
-                    content: '""',
+                }}
+              >
+                <img
+                  src={city.img}
+                  alt={city.name}
+                  loading="lazy"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                  }}
+                />
+                <Box
+                  sx={{
                     position: 'absolute',
                     inset: 0,
                     background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.05) 60%)',
-                  },
-                }}
-              >
-                <Box sx={{ position: 'absolute', bottom: 12, left: 14, zIndex: 1, display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                    zIndex: 1,
+                  }}
+                />
+                <Box sx={{ position: 'absolute', bottom: 12, left: 14, zIndex: 2, display: 'flex', alignItems: 'center', gap: 0.5 }}>
                   <LocationOnIcon sx={{ fontSize: 16, color: 'white' }} />
                   <Typography sx={{ color: 'white', fontWeight: 700, fontSize: '0.95rem' }}>
                     {city.name}
