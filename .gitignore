@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+*.db
+
+# Node
+node_modules/
+dist/
+
+# PostgreSQL data
+pgdata/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
