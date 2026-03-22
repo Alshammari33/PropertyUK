@@ -27,6 +27,15 @@ const POPULAR_CITIES = [
   { name: 'Leeds', img: 'https://images.unsplash.com/photo-1590075254806-fb228a70bfb8?w=400&h=260&fit=crop' },
   { name: 'Glasgow', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=260&fit=crop' },
   { name: 'Liverpool', img: 'https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?w=400&h=260&fit=crop' },
+  { name: 'Sheffield', img: 'https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=400&h=260&fit=crop' },
+  { name: 'Cardiff', img: 'https://images.unsplash.com/photo-1572883454114-efb93fc35b32?w=400&h=260&fit=crop' },
+  { name: 'Newcastle', img: 'https://images.unsplash.com/photo-1589920527942-477a8e04a1f2?w=400&h=260&fit=crop' },
+  { name: 'Nottingham', img: 'https://images.unsplash.com/photo-1584466977773-e625c37cdd50?w=400&h=260&fit=crop' },
+  { name: 'Brighton', img: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&h=260&fit=crop' },
+  { name: 'Cambridge', img: 'https://images.unsplash.com/photo-1579862132201-ac5f2990bc8e?w=400&h=260&fit=crop' },
+  { name: 'Oxford', img: 'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=400&h=260&fit=crop' },
+  { name: 'Bath', img: 'https://images.unsplash.com/photo-1580406458354-cc49419d4649?w=400&h=260&fit=crop' },
+  { name: 'Reading', img: 'https://images.unsplash.com/photo-1617128734662-66da6c1d3505?w=400&h=260&fit=crop' },
 ];
 
 function Home() {
